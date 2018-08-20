@@ -1,10 +1,7 @@
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
 # Install posh-git
-pushd
-cd posh-git
-Import-Module .\posh-git
-popd
+Import-Module posh-git
 
 . ./configurePrompt.ps1
 . ./ssh-agent-utils.ps1
@@ -123,9 +120,8 @@ function wcfclient {
 }
 
 
-. ./environment.ps1
-
-cd ~/code/flip
+# . ./environment.ps1
+cd ~/Code
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
