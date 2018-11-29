@@ -121,7 +121,7 @@ function wcfclient {
 
 
 # . ./environment.ps1
-cd ~/Code
+
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
