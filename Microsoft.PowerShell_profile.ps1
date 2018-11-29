@@ -1,3 +1,6 @@
+
+$profileDir = Convert-Path .
+
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
 # Install posh-git
@@ -121,7 +124,7 @@ function wcfclient {
 
 
 # . ./environment.ps1
-
+Push-Location $profileDir
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
